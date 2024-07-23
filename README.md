@@ -1,6 +1,9 @@
 # TravBlog
 An innovative headless travel blog website built with Next.js for the frontend and WordPress for the backend. This project leverages modern technologies like GraphQL, Cloudinary for image optimization, NextUI, Shadcn UI for UI design, and TypeScript for type safety.
 
+![travel-blog-headless website](https://github.com/user-attachments/assets/b777588d-9049-45b1-aab6-5dbec5afbad6)
+
+
 ## Introduction
 TravBlog is a headless CMS travel blog website designed to address the challenges faced by business owners and developers when managing traditional CMS platforms. By separating the frontend and backend, this project offers greater flexibility and efficiency in content management and delivery across multiple digital platforms.
 
