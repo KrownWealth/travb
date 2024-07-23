@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TravBlog
+An innovative headless travel blog website built with Next.js for the frontend and WordPress for the backend. This project leverages modern technologies like GraphQL, Cloudinary for image optimization, NextUI, Shadcn UI for UI design, and TypeScript for type safety.
 
-## Getting Started
+## Introduction
+TravBlog is a headless CMS travel blog website designed to address the challenges faced by business owners and developers when managing traditional CMS platforms. By separating the frontend and backend, this project offers greater flexibility and efficiency in content management and delivery across multiple digital platforms.
 
-First, run the development server:
+## Problem Statement
+Traditional CMS platforms like WordPress and Drupal often bundle content with code, creating a "one big bucket" approach that poses several challenges including:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Difficulty in reusing content across different digital platforms.
+2. Complexity in editing and managing content without risking the integrity of the codebase.
+3. Inflexibility in adapting to new digital channels and devices, such as mobile apps, digital displays, and conversational interfaces.
+These issues make it hard for business owners to manage content efficiently and for developers to create seamless digital experiences.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scope of the Project
+TravBlog aims to solve these problems by implementing a headless CMS architecture. This project focuses on:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Building a modern frontend with Next.js and Tailwind CSS.
+Integrating WordPress as a backend CMS using GraphQL to fetch and manage blog data.
+Optimizing images with Cloudinary.
+Enhancing UI design with NextUI and Shadcn UI.
+Ensuring type safety with TypeScript.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Solution
+Headless CMS architecture decouples the frontend from the backend, allowing content to be managed and delivered independently. This approach provides several benefits including:
 
-## Learn More
+* Flexibility to reuse content across multiple digital platforms.
+* Simplified content management, enabling business owners to make changes without affecting the codebase.
+* Ability to quickly adapt to new digital channels and devices.
+* Improved performance and scalability of the website.
 
-To learn more about Next.js, take a look at the following resources:
+### Stack Used
+* Frontend: Next.js, React, Tailwind CSS
+* Backend: WordPress
+* Integration: GraphQL
+* Image Optimization: Cloudinary
+* UI Design: NextUI, Shadcn UI
+* Type Safety: TypeScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Features
+* Designed and developed 2 responsive web pages for homepage and efficient dynamic blog route 
+* Configured and setup GraphQL IDE on WordPress for dynamic data fetching
+* Wrote 3+ GraphQL queries and 1 mutation for posts, custom data types ensuring only needed are been fetched.
+* Implemented server action using Next.Js App router and SSR features integrating frontedn and backend to harmonisly work together properly
+* Achieve 70% faster website laod under 5milliseconds through image optimization with Cloudinary.
