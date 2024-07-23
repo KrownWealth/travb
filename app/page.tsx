@@ -1,9 +1,7 @@
 import {
-  BlogCategories,
   Blogs,
-  Hero,
+  HeroSlider,
   TopDestinations,
-  TopNavBar,
   Trips
 } from '@/components/reuseables'
 
@@ -11,11 +9,12 @@ export default function Home() {
   return (
     <>
      
-      <Hero />
+      {/* <Hero /> */}
+      <HeroSlider />
       <Blogs />
-      {/* <Trips />
+      <Trips />
       <TopDestinations />
-      <BlogCategories /> */}
+      {/* <BlogCategories /> */}
     </>
   )
 }

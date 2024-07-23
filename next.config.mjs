@@ -7,14 +7,16 @@ const nextConfig = {
         hostname: 'res.cloudinary.com',
         port: '',
         pathname: '/**'
-      },
-      {
-        protocol: 'https',
-        hostname: 'daisyui.com',
-        port: '',
-        pathname: '/images/stock/**'
       }
     ]
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false
+      }
+    }
+    return config
   }
 }
 

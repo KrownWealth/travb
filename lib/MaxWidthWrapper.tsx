@@ -18,7 +18,7 @@ const MaxWidthWrapper = ({
   return (
     <div
       className={cn(
-        'w-full max-w-screen-2xl items-center h-[100vh]',
+        'w-full max-w-screen-2xl items-center',
         className
       )}
     >
@@ -31,7 +31,7 @@ const MaxWidthWrapper = ({
       >
         <NextUIProvider>
            <TopNavBar />
-         <main> {children}</main>
+         <main className="h-auto"> {children}</main>
           <FooterNav />
         </NextUIProvider>
       </ThemeProvider>

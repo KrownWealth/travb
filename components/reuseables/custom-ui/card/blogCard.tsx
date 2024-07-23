@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
@@ -18,32 +16,32 @@ const BlogCard: React.FC<BlogCardProps> = ({
   featuredImage,
   author,
   excerpt,
-  disableanimation = false, 
+  disableanimation = false,
 }) => {
 
-// set default image if featured image IS NOT PRESENT, same for author avatar, and author name
+  const defaultImageUrl = '/images/man-hiking.svg'; 
+  const getImageUrl = () => {
+    if (featuredImage?.node?.mediaDetails?.sizes) {
+      const sizes = featuredImage.node.mediaDetails.sizes;
+      const largeImage = sizes.find(size => size.width >= 1024);
+      return largeImage ? largeImage.sourceUrl : defaultImageUrl;
+    }
+    return defaultImageUrl;
+  };
 
-const defaultImageUrl = '/images/man-hiking.svg';
- 
-// const imageUrl = featuredImage?.node?.mediaDetails?.sizes?.[0]?.sourceUrl ?? defaultImageUrl;
-//  const imageWidth = imageUrl === defaultImageUrl ? 500 : featuredImage?.node?.mediaDetails?.sizes?.[0]?.width || 500;
-//  const imageHeight = imageUrl === defaultImageUrl ? 200 : featuredImage?.node?.mediaDetails?.sizes?.[0]?.height || 200;
-
-  //const authorName = author?.node?.name || 'Unknown Author';
-const authorAvatarUrl = author?.node?.avatar?.url || '/images/image.svg'; 
-
+  const imageUrl = getImageUrl();
+  const authorAvatarUrl = author?.node?.avatar?.url || '/images/default-avatar.jpg'; 
+  
   return (
     <Card className={`rounded-lg overflow-hidden w-full shadow-md cursor-pointer border ${disableanimation ? 'no-animation' : ''}`}>
       <CardHeader className='p-0'>
-        <div className="relative w-full h-18">
+        <div className="relative w-full h-48">
           <Image
             alt={title}
-            className="h-full w-full"
-            src={defaultImageUrl}
-            width={100}
-            height={100}
-           
-            priority
+            src={imageUrl}
+            quality={100} 
+            layout="fill" 
+            objectFit="cover" 
           />
         </div>
       </CardHeader>
@@ -52,7 +50,7 @@ const authorAvatarUrl = author?.node?.avatar?.url || '/images/image.svg';
         <div>
           <div className='flex justify-between'>
             <User
-            name={author?.node?.name || 'Unknown Author'}   
+              name={author?.node?.name || 'Unknown Author'}   
               avatarProps={{
                 src: authorAvatarUrl
               }}
@@ -63,8 +61,7 @@ const authorAvatarUrl = author?.node?.avatar?.url || '/images/image.svg';
             </div>
           </div>
           <h3 className="text-xl font-bold py-2">{title}</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm"
-           dangerouslySetInnerHTML={{ __html: excerpt }} />
+          <p className="text-gray-700 dark:text-gray-300 text-sm" dangerouslySetInnerHTML={{ __html: excerpt }} />
         </div>
       </CardContent>
      

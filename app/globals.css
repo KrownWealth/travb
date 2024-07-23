@@ -2,4 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
- 
+.bgWrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Hero section takes full viewport height */
+.heroBg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 10;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; 
+  position: relative;
+}
+
+.heroBg .contentContainer {
+  text-align: center;
+  z-index: 40;
+  color: white;
+  padding: 20px;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.1); 
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.video-placeholder {
+  height: 100vh;
+  width: 100%;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.placeholder-content {
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.placeholder-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.placeholder-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+
+
+/* Destination */
+.swiper-stories
+{
+  width: 100%;
+  height: 200px;
+  margin: 10px auto;
+}
+    
+.swiper-slide-container {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height:100%;
+  max-width: 600px;
+  margin:auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

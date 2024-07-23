@@ -8,10 +8,10 @@ function Trips() {
   return (
     <section className={cn('container min-h-96 my-20', style.tripBg)}>
       <div className={cn('z-40 text-white', style.contentContainer)}>
-         <h1 className={cn('items-center pb-4 text-center text-2xl sm:text-2xl font-bold uppercase', Europa_Bold)}>
+         <h1 className={cn('items-center pb-4 text-center text-lg sm:text-2xl font-bold uppercase', Europa_Bold)}>
           Richird Norton photorealistic rendering as real photos
         </h1>
-        <p className={cn('text-lg pb-12 px-8 text-center items-center',Europa_Bold_Regular)}>
+        <p className={cn('text-sm pb-12 px-8 text-center items-center',Europa_Bold_Regular)}>
          Progressively incentivize cooperative systems through 
           technically sound functionalities. The credibly productivate seamless data.
         </p>

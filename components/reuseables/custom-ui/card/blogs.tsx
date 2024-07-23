@@ -5,11 +5,14 @@ import { BlogType } from '@/types/blog';
 import BlogCard from './blogCard';
 import { getAllPosts } from '@/lib/actions';
 import Link from 'next/link';
+import BlogsLoading from '../skeletons/blogsSkeleton';
 
 const Blogs = () => {
   const [allBlogs, setAllBlogs] = useState<BlogType[]>([]);
   const [displayedBlogs, setDisplayedBlogs] = useState<BlogType[]>([]);
   const [visibleCount, setVisibleCount] = useState(6);
+  const [loading, setLaoding] = useState(true)
+  const [error, setError] =useState<string | null>(null);
 
   useEffect(() => {
     async function fetchPosts() {
@@ -18,8 +21,11 @@ const Blogs = () => {
         console.log("Blog post here", allPosts);
         setAllBlogs(allPosts);
         setDisplayedBlogs(allPosts.slice(0, visibleCount));
-      } catch (error) {
+        setLaoding(false)
+      } catch (error:any) {
         console.error('Error fetching posts:', error);
+        setLaoding(false)
+        setError('Error fetching post');
       }
     }
 
@@ -29,6 +35,12 @@ const Blogs = () => {
   const handleLoadMore = () => {
     setVisibleCount(prevCount => prevCount + 3);
   };
+
+  if(loading){
+    return <BlogsLoading />
+  }
+  if (error) return <p>{error}</p>;
+
 
   return (
     <section className="container my-20">
