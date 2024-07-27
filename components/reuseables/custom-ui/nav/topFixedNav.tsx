@@ -45,7 +45,7 @@ const TopNavBar = () => {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 flex h-14 w-full items-center justify-center  font-bold
+      className={`fixed left-0 right-0 top-0 z-50 flex h-14 w-full items-center justify-center  font-bold border-b shadow-md
          ${isHomePage ? (isScrolled ? 'bg-black text-white' : 'bg-black bg-opacity-25') : 'bg-black text-white'} cursor-pointer transition-colors duration-300`}
     >
       <nav className='flex-no-wrap container z-40 flex h-24 w-full flex-row items-center justify-between gap-4 sm:px-12'>

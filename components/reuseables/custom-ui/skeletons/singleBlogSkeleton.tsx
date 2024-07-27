@@ -13,7 +13,11 @@ const SingleBlogsLoading = () => {
         <div className="w-12 h-6 bg-gray-200"></div>
       </div>
       <div className="w-full h-[300px] bg-gray-200 animate-pulse"></div>
-      <div className="h-auto bg-gray-200 animate-pulse"></div>
+      <div className="h-[400px] bg-gray-200 animate-pulse">
+        <div className="w-full h-6 bg-gray-200"></div>
+         <div className="w-full h-6 bg-gray-200"></div>
+          <div className="w-full h-6 bg-gray-200"></div>
+      </div>
       
       </div>
     </div>

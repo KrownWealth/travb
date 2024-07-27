@@ -8,7 +8,7 @@ import { BsFacebook, BsTwitterX, BsLinkedin } from 'react-icons/bs'
 
 const FooterNav = () => {
   return (
-    <footer className='relative bottom-0 w-full bg-black text-white items-center justify-center border-t-2'>
+    <footer className='relative bottom-0 w-full bg-black text-white items-center justify-center border-t'>
       
       <div className="container flex flex-col gap-4 sm:flex-row sm:justify-between items-center justify-center lg:px-12 py-10 sm:py-20 ">
           <div className='flex gap-2'> 
