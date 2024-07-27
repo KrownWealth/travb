@@ -18,7 +18,7 @@ const Blogs = () => {
     async function fetchPosts() {
       try {
         const allPosts = await getAllPosts();
-        console.log("Blog post here", allPosts);
+        //console.log("Blog post here", allPosts);
         setAllBlogs(allPosts);
         setDisplayedBlogs(allPosts.slice(0, visibleCount));
         setLaoding(false)
@@ -43,7 +43,7 @@ const Blogs = () => {
 
 
   return (
-    <section className="container my-20">
+    <section className="container my-20 lg:px-12">
       <div className="gap-8 grid grid-cols-1 sm:grid-cols-3">
         {displayedBlogs.map((blog, index) => (
           <Link key={index} href={`/posts/${blog.slug}`}>

@@ -9,7 +9,8 @@ import BlogCategories from "./custom-ui/Categories/categories"
 import SinglePost from "./custom-ui/blogCards/singleBlog"
 import BlogsLoading from "./custom-ui/skeletons/blogsSkeleton"
 import HeroSlider from "./custom-ui/heros/heroSlider"
+import SingleBlogsLoading from "./custom-ui/skeletons/singleBlogSkeleton"
 
 
 export { FooterNav, Hero, Blogs, ExploreButton, TopNavBar, Trips, TopDestinations, 
-  BlogCategories, SinglePost, BlogsLoading, HeroSlider }
+  BlogCategories, SinglePost, BlogsLoading, HeroSlider, SingleBlogsLoading }

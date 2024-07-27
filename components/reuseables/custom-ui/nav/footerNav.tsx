@@ -8,9 +8,9 @@ import { BsFacebook, BsTwitterX, BsLinkedin } from 'react-icons/bs'
 
 const FooterNav = () => {
   return (
-    <footer className='w-full bg-black text-white px-4 py-10 sm:py-20 items-center justify-center border-t-2'>
+    <footer className='relative bottom-0 w-full bg-black text-white items-center justify-center border-t-2'>
       
-      <div className="container flex flex-col gap-4 sm:flex-row sm:justify-between items-center justify-center">
+      <div className="container flex flex-col gap-4 sm:flex-row sm:justify-between items-center justify-center lg:px-12 py-10 sm:py-20 ">
           <div className='flex gap-2'> 
           <BsFacebook className='h-5 w-5 '/>
           <BsTwitterX className='h-5 w-5' />
@@ -18,8 +18,8 @@ const FooterNav = () => {
           </div>
             
         
-          <p className={cn('text-lg', Europa_Bold_Regular)}>Developed by <span className={cn('uppercase font-bold', EuropaNuova_Bold_Regular)}>
-            Leodaa&apos;s Web Solutions</span></p>
+          <p className={cn('text-lg flex items-center justify-center font-bold', Europa_Bold_Regular)}><span>Developed by&nbsp;</span>
+          Leodaa&apos;s Web Solutions</p>
          
         <div className='flex gap-4 items-center justify-center'>
               <ThemeSwitcher />

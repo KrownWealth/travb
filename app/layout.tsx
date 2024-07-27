@@ -25,11 +25,7 @@ export default async function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={cn(
-          'font-san antialiase m-auto max-w-screen-2xl min-h-screen',
-          Europa_Bold_Regular.className,
-          inter.className
-        )}
+        
       >
         <MaxWidthWrapper>{children}</MaxWidthWrapper>
       </body>

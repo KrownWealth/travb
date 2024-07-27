@@ -1,12 +1,8 @@
-'use client'
-
 import { ReactNode } from 'react'
-
 import { cn } from '@/lib/utils'
 import { NextUIProvider } from '@nextui-org/react'
 import { ThemeProvider } from './theme-Provider'
 import { TopNavBar, FooterNav } from '@/components/reuseables'
-
 
 const MaxWidthWrapper = ({
   className,
@@ -16,12 +12,7 @@ const MaxWidthWrapper = ({
   children: ReactNode
 }) => {
   return (
-    <div
-      className={cn(
-        'w-full max-w-screen-2xl items-center',
-        className
-      )}
-    >
+    <div className={cn('flex flex-col h-full')}>
       <ThemeProvider
         attribute='class'
         defaultTheme='dark'
@@ -30,8 +21,8 @@ const MaxWidthWrapper = ({
         disableTransitionOnChange
       >
         <NextUIProvider>
-           <TopNavBar />
-         <main className="h-auto"> {children}</main>
+          <TopNavBar />
+          <main> {children}</main>
           <FooterNav />
         </NextUIProvider>
       </ThemeProvider>

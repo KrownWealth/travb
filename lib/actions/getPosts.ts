@@ -52,7 +52,7 @@ async function getAllPosts(): Promise<BlogType[]> {
     throw new Error('Invalid GraphQL response')
   }
   const allPosts: BlogType[] = resJson.data.posts.nodes
-  console.log('This is all post', allPosts)
+  //console.log('This is all post', allPosts)
   return allPosts
 }
 
