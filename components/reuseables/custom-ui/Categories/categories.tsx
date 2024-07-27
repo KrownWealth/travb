@@ -2,8 +2,8 @@ import { Card } from '@/components/ui/card'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import CategoryCard from '../card/categoryCard'
-import SubCategoryCard from '../card/subCategoryCard'
+import CategoryCard from '../blogCards/categoryCard'
+import SubCategoryCard from '../blogCards/subCategoryCard'
 
 function BlogCategories() {
   const subCategory = [
