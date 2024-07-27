@@ -1,19 +1,19 @@
 import {
+  AutoplayCarousel,
   Blogs,
   HeroSlider,
-  TopDestinations,
+  // TopDestinations,
   Trips
 } from '@/components/reuseables'
 
 export default function Home() {
   return (
     <>
-     
-      {/* <Hero /> */}
       <HeroSlider />
       <Blogs />
       <Trips />
-      <TopDestinations />
+      {/* <TopDestinations /> */}
+    <AutoplayCarousel />
       {/* <BlogCategories /> */}
     </>
   )
