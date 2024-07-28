@@ -1,11 +1,4 @@
-.tripBg {
-  position: relative;
-  /* height: 100vh;   */
-  display: flex;
-  flex-direction: column;
-}
-
-.tripBg {
+.tripBg{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,9 +6,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/images/image.svg');
+  background-image: url('/images/palmtree-beach.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .tripBg .contentContainer {
